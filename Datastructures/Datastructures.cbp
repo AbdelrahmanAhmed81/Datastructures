@@ -30,9 +30,12 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-g" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Includes/List.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/List.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
