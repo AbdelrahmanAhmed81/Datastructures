@@ -110,7 +110,9 @@ void List::Remove()
 
 void List::RemoveAt(int index)
 {
-    if (IsValidIndex(index))
+    if (!IsValidIndex(index))
+        throw std::out_of_range("index out of list elements range");
+    else
     {
         if (index != _count - 1)
         {
@@ -118,8 +120,6 @@ void List::RemoveAt(int index)
         }
         _count--;
     }
-    else
-        throw std::out_of_range("index out of list elements range");
 }
 
 void List::RemoveRange(int index, int length)
