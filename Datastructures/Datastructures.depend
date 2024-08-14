@@ -1,11 +1,17 @@
 # depslib dependency file v1.0
-1723518426 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
+1723609782 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
 	<iostream>
-	"Includes/List.hpp"
+	"src/List.tpp"
 
-1723518174 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\list.hpp
+1723608804 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\list.hpp
 
-1723518386 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\list.cpp
+1723608095 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\list.cpp
+
+1723607803 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\list.cpp
+	<stdexcept>
+	<iostream>
+
+1723609811 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\list.tpp
 	"../Includes/List.hpp"
 	<stdexcept>
 	<iostream>

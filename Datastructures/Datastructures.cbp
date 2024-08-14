@@ -36,6 +36,7 @@
 		<Unit filename="Includes/List.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/List.cpp" />
+		<Unit filename="src/List.tpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

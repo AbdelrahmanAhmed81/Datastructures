@@ -1,6 +1,4 @@
-#ifndef LIST_HPP_INCLUDED
-#define LIST_HPP_INCLUDED
-
+template <class T>
 class List
 {
 public:
@@ -11,19 +9,19 @@ public:
     /// get the number of the items in the list
     int Count();
     /// get element value in a specific index
-    int ElementAt(int index);
+    T ElementAt(int index);
     /// get element value in a specific index
-    int &operator[](int index);
+    T &operator[](int index);
     /// get the capacity of the list
     int Size();
     /// clear the list
     void Clear();
-    /// add element to the list
-    void Add(int element);
+    /// add element at the end of the list
+    void Add(T element);
     /// add element at a specific index
-    void AddAt(int index, int element);
+    void AddAt(int index, T element);
     /// add range of elements starting from a specific indexs
-    void AddRange(int index, int *elements, int length);
+    void AddRange(int index, T *elements, int length);
     /// removes the last element
     void Remove();
     /// removes element at a specific index
@@ -34,14 +32,12 @@ public:
     void Print();
 
 private:
+    const int _resizeCapacity = 4;
     int _size;
     int _count;
-    int *_data;
-    const int _resizeCapacity = 4;
+    T *_data;
     bool HasSpace(int minimumCapacity);
     bool IsValidIndex(int index);
     void Resize(int capacity);
-    void static Copy(int *src, int srcIndex, int *dest, int destIndex, int length);
+    void static Copy(T *src, int srcIndex, T *dest, int destIndex, int length);
 };
-
-#endif

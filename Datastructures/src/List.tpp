@@ -2,26 +2,30 @@
 #include <stdexcept>
 #include <iostream>
 
-List::List(int size)
+template <class T>
+List<T>::List(int size)
 {
     _size = size;
     _count = 0;
-    _data = new int[size]{0};
+    _data = new T[size];
 }
 
-List::List() : List::List(6)
+template <class T>
+List<T>::List() : List::List(6)
 {
 }
 
-int List::Size()
+template <class T>
+int List<T>::Size()
 {
     return _size;
 }
 
-void List::Resize(int capacity)
+template <class T>
+void List<T>::Resize(int capacity)
 {
     int newSize = _size + capacity;
-    int *newData = new int[newSize];
+    T *newData = new T[newSize];
     for (int i = 0; i < _size; i++)
     {
         newData[i] = _data[i];
@@ -30,7 +34,8 @@ void List::Resize(int capacity)
     _data = newData;
 }
 
-int List::ElementAt(int index)
+template <class T>
+T List<T>::ElementAt(int index)
 {
     if (IsValidIndex(index))
         return _data[index];
@@ -38,22 +43,26 @@ int List::ElementAt(int index)
         throw std::out_of_range("index out of list elements range");
 }
 
-int List::Count()
+template <class T>
+int List<T>::Count()
 {
     return _count;
 }
 
-bool List::HasSpace(int minimumCapacity)
+template <class T>
+bool List<T>::HasSpace(int minimumCapacity)
 {
     return (_size - _count >= minimumCapacity);
 }
 
-bool List::IsValidIndex(int index)
+template <class T>
+bool List<T>::IsValidIndex(int index)
 {
     return (index >= 0 && index < _count);
 }
 
-int &List::operator[](int index)
+template <class T>
+T &List<T>::operator[](int index)
 {
     if (IsValidIndex(index))
         return _data[index];
@@ -61,17 +70,20 @@ int &List::operator[](int index)
         throw std::out_of_range("index out of list elements range");
 }
 
-void List::Clear()
+template <class T>
+void List<T>::Clear()
 {
     List::RemoveRange(0, _count);
 }
 
-void List::Add(int element)
+template <class T>
+void List<T>::Add(T element)
 {
     List::AddAt(_count, element);
 }
 
-void List::AddAt(int index, int element)
+template <class T>
+void List<T>::AddAt(int index, T element)
 {
     if (index < 0 || index > _count)
         throw std::out_of_range("index out of list elements range");
@@ -87,7 +99,8 @@ void List::AddAt(int index, int element)
     _count++;
 }
 
-void List::AddRange(int index, int *elements, int length)
+template <class T>
+void List<T>::AddRange(int index, T *elements, int length)
 {
     if (index < 0 || index > _count)
         throw std::out_of_range("index out of list elements range");
@@ -103,12 +116,14 @@ void List::AddRange(int index, int *elements, int length)
     _count += length;
 }
 
-void List::Remove()
+template <class T>
+void List<T>::Remove()
 {
     List::RemoveAt(_count - 1);
 }
 
-void List::RemoveAt(int index)
+template <class T>
+void List<T>::RemoveAt(int index)
 {
     if (!IsValidIndex(index))
         throw std::out_of_range("index out of list elements range");
@@ -122,7 +137,8 @@ void List::RemoveAt(int index)
     }
 }
 
-void List::RemoveRange(int index, int length)
+template <class T>
+void List<T>::RemoveRange(int index, int length)
 {
     if (IsValidIndex(index) && index + length <= _count)
     {
@@ -137,7 +153,8 @@ void List::RemoveRange(int index, int length)
         throw std::out_of_range("invalid range");
 }
 
-void List::Copy(int *src, int srcIndex, int *dest, int destIndex, int length)
+template <class T>
+void List<T>::Copy(T *src, int srcIndex, T *dest, int destIndex, int length)
 {
     if (srcIndex >= destIndex)
     {
@@ -155,13 +172,14 @@ void List::Copy(int *src, int srcIndex, int *dest, int destIndex, int length)
     }
 }
 
-void List::Print()
+template <class T>
+void List<T>::Print()
 {
     if (_count > 0)
     {
         for (int i = 0; i < _count; i++)
         {
-            std::cout << _data[i] << ", ";
+            std::cout << _data[i] << ' ';
         }
     }
     else
