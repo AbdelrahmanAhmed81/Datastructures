@@ -1,28 +1,23 @@
-#include "../Includes/List.hpp"
+#include "../Includes/ArrayList.hpp"
 #include <stdexcept>
 #include <iostream>
 
 template <class T>
-List<T>::List(int size)
+ArrayList<T>::ArrayList()
 {
-    _size = size;
+    _size = _initCapacity;
     _count = 0;
-    _data = new T[size];
+    _data = new T[_initCapacity];
 }
 
 template <class T>
-List<T>::List() : List::List(6)
-{
-}
-
-template <class T>
-int List<T>::Size()
+int ArrayList<T>::Size()
 {
     return _size;
 }
 
 template <class T>
-void List<T>::Resize(int capacity)
+void ArrayList<T>::Resize(int capacity)
 {
     int newSize = _size + capacity;
     T *newData = new T[newSize];
@@ -35,7 +30,7 @@ void List<T>::Resize(int capacity)
 }
 
 template <class T>
-T List<T>::ElementAt(int index)
+T ArrayList<T>::ElementAt(int index)
 {
     if (IsValidIndex(index))
         return _data[index];
@@ -44,25 +39,25 @@ T List<T>::ElementAt(int index)
 }
 
 template <class T>
-int List<T>::Count()
+int ArrayList<T>::Count()
 {
     return _count;
 }
 
 template <class T>
-bool List<T>::HasSpace(int minimumCapacity)
+bool ArrayList<T>::HasSpace(int minimumCapacity)
 {
     return (_size - _count >= minimumCapacity);
 }
 
 template <class T>
-bool List<T>::IsValidIndex(int index)
+bool ArrayList<T>::IsValidIndex(int index)
 {
     return (index >= 0 && index < _count);
 }
 
 template <class T>
-T &List<T>::operator[](int index)
+T &ArrayList<T>::operator[](int index)
 {
     if (IsValidIndex(index))
         return _data[index];
@@ -71,19 +66,19 @@ T &List<T>::operator[](int index)
 }
 
 template <class T>
-void List<T>::Clear()
+void ArrayList<T>::Clear()
 {
-    List::RemoveRange(0, _count);
+    ArrayList::RemoveRange(0, _count);
 }
 
 template <class T>
-void List<T>::Add(T element)
+void ArrayList<T>::Add(T element)
 {
-    List::AddAt(_count, element);
+    ArrayList::AddAt(_count, element);
 }
 
 template <class T>
-void List<T>::AddAt(int index, T element)
+void ArrayList<T>::AddAt(int index, T element)
 {
     if (index < 0 || index > _count)
         throw std::out_of_range("index out of list elements range");
@@ -93,14 +88,14 @@ void List<T>::AddAt(int index, T element)
 
     if (index != _count)
     {
-        List::Copy(_data, index, _data, index + 1, _count - index);
+        ArrayList::Copy(_data, index, _data, index + 1, _count - index);
     }
     _data[index] = element;
     _count++;
 }
 
 template <class T>
-void List<T>::AddRange(int index, T *elements, int length)
+void ArrayList<T>::AddRange(int index, T *elements, int length)
 {
     if (index < 0 || index > _count)
         throw std::out_of_range("index out of list elements range");
@@ -110,20 +105,20 @@ void List<T>::AddRange(int index, T *elements, int length)
 
     if (index != _count)
     {
-        List::Copy(_data, index, _data, index + length, _count - index);
+        ArrayList::Copy(_data, index, _data, index + length, _count - index);
     }
-    List::Copy(elements, 0, _data, index, length);
+    ArrayList::Copy(elements, 0, _data, index, length);
     _count += length;
 }
 
 template <class T>
-void List<T>::Remove()
+void ArrayList<T>::Remove()
 {
-    List::RemoveAt(_count - 1);
+    ArrayList::RemoveAt(_count - 1);
 }
 
 template <class T>
-void List<T>::RemoveAt(int index)
+void ArrayList<T>::RemoveAt(int index)
 {
     if (!IsValidIndex(index))
         throw std::out_of_range("index out of list elements range");
@@ -131,20 +126,20 @@ void List<T>::RemoveAt(int index)
     {
         if (index != _count - 1)
         {
-            List::Copy(_data, index + 1, _data, index, _count - (index + 1));
+            ArrayList::Copy(_data, index + 1, _data, index, _count - (index + 1));
         }
         _count--;
     }
 }
 
 template <class T>
-void List<T>::RemoveRange(int index, int length)
+void ArrayList<T>::RemoveRange(int index, int length)
 {
     if (IsValidIndex(index) && index + length <= _count)
     {
         if (index + length != _count)
         {
-            List::Copy(_data, index + length, _data, index, _count - (index + length));
+            ArrayList::Copy(_data, index + length, _data, index, _count - (index + length));
         }
 
         _count -= length;
@@ -154,7 +149,7 @@ void List<T>::RemoveRange(int index, int length)
 }
 
 template <class T>
-void List<T>::Copy(T *src, int srcIndex, T *dest, int destIndex, int length)
+void ArrayList<T>::Copy(T *src, int srcIndex, T *dest, int destIndex, int length)
 {
     if (srcIndex >= destIndex)
     {
@@ -173,7 +168,7 @@ void List<T>::Copy(T *src, int srcIndex, T *dest, int destIndex, int length)
 }
 
 template <class T>
-void List<T>::Print()
+void ArrayList<T>::Print()
 {
     if (_count > 0)
     {

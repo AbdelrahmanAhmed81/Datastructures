@@ -1,11 +1,9 @@
 template <class T>
-class List
+class ArrayList
 {
 public:
-    /// create a list with a specific size
-    List(int size);
     /// create a list with the default size [default = 6]
-    List();
+    ArrayList();
     /// get the number of the items in the list
     int Count();
     /// get element value in a specific index
@@ -33,6 +31,7 @@ public:
 
 private:
     const int _resizeCapacity = 4;
+    const int _initCapacity = 6;
     int _size;
     int _count;
     T *_data;

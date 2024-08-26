@@ -33,9 +33,9 @@
 			<Add option="-g" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Includes/Collection.hpp" />
 		<Unit filename="Includes/List.hpp" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/List.cpp" />
 		<Unit filename="src/List.tpp" />
 		<Extensions />
 	</Project>
