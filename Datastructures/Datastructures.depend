@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1724632907 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
+1724904595 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
 	<iostream>
 	"src/ArrayList.tpp"
+	"src/LinkedList.tpp"
 
 1723608804 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\list.hpp
 
@@ -16,10 +17,16 @@
 	<stdexcept>
 	<iostream>
 
-1724632605 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\arraylist.tpp
+1724901346 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\arraylist.tpp
 	"../Includes/ArrayList.hpp"
 	<stdexcept>
 	<iostream>
 
-1724632752 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\arraylist.hpp
+1724633422 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\arraylist.hpp
+
+1724906700 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\linkedlist.tpp
+	<iostream>
+	"../Includes/LinkedList.hpp"
+
+1724903539 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\linkedlist.hpp
 

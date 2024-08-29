@@ -170,16 +170,15 @@ void ArrayList<T>::Copy(T *src, int srcIndex, T *dest, int destIndex, int length
 template <class T>
 void ArrayList<T>::Print()
 {
-    if (_count > 0)
+    if (_count <= 0)
+        std::cout << "Empty List";
+    else
     {
         for (int i = 0; i < _count; i++)
         {
             std::cout << _data[i] << ' ';
         }
     }
-    else
-    {
-        std::cout << "Empty List";
-    }
+
     std::cout << std::endl;
 }
