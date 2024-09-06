@@ -14,11 +14,26 @@ int main()
     // delete(list);
     //-------------------------------------------------------
     // test LinkedList
-    LinkedList<int> *linkedList = new LinkedList<int>();
-    linkedList->Add(7);
-    linkedList->Add(3);
-
+    LinkedList<string> *linkedList = new LinkedList<string>();
+    linkedList->AddLast("hello");
+    linkedList->AddLast("world");
     linkedList->Print();
 
+    LinkedListNode<string> *result_1 = linkedList->Find("world");
+    if (result_1 != nullptr)
+    {
+        linkedList->AddNext(result_1, "!");
+    }
+    linkedList->Print();
+
+    LinkedListNode<string> *result_2 = linkedList->Find("hello");
+    if (result_2 != nullptr)
+    {
+        linkedList->AddBefore(result_2, ":)");
+    }
+    linkedList->Print();
+
+    delete (result_1);
+    delete (result_2);
     return 0;
 }
