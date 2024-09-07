@@ -1,6 +1,7 @@
 #include <iostream>
-#include "src/ArrayList.tpp"
-#include "src/LinkedList.tpp"
+// #include "src/ArrayList.tpp"
+// #include "src/LinkedList.tpp"
+#include "src/Stack.tpp"
 using namespace std;
 
 int main()
@@ -12,28 +13,46 @@ int main()
     // list->AddAt(1,"My");
     // list->Print();
     // delete(list);
+
     //-------------------------------------------------------
-    // test LinkedList
-    LinkedList<string> *linkedList = new LinkedList<string>();
-    linkedList->AddLast("hello");
-    linkedList->AddLast("world");
-    linkedList->Print();
 
-    LinkedListNode<string> *result_1 = linkedList->Find("world");
-    if (result_1 != nullptr)
-    {
-        linkedList->AddNext(result_1, "!");
-    }
-    linkedList->Print();
+    //// test LinkedList
+    // LinkedList<string> *linkedList = new LinkedList<string>();
+    // linkedList->AddLast("hello");
+    // linkedList->AddLast("world");
+    // linkedList->Print();
 
-    LinkedListNode<string> *result_2 = linkedList->Find("hello");
-    if (result_2 != nullptr)
-    {
-        linkedList->AddBefore(result_2, ":)");
-    }
-    linkedList->Print();
+    // LinkedListNode<string> *result_1 = linkedList->Find("world");
+    // if (result_1 != nullptr)
+    // {
+    //     linkedList->AddNext(result_1, "!");
+    // }
+    // linkedList->Print();
 
-    delete (result_1);
-    delete (result_2);
+    // LinkedListNode<string> *result_2 = linkedList->Find("hello");
+    // if (result_2 != nullptr)
+    // {
+    //     linkedList->AddBefore(result_2, ":)");
+    // }
+    // linkedList->Print();
+
+    // delete (result_1);
+    // delete (result_2);
+
+    //-------------------------------------------------------
+
+    ////stack test
+    // Stack<int> *stack = new Stack<int>();
+    // stack->Push(5);
+    // stack->Push(4);
+    // stack->Push(2);
+    // stack->Print();
+    // cout << stack->Pop() <<endl;
+    // cout << stack->Pop() <<endl;
+    // stack->Print();
+
+    //-------------------------------------------------------
+
+    
     return 0;
 }

@@ -188,6 +188,19 @@ void LinkedList<T>::AddBefore(LinkedListNode<T> *node, T value)
         newNode->_prev->_next = newNode;
     }
 }
+
+template <class T>
+T LinkedList<T>::GetTailValue()
+{
+    return _tail->_value;
+}
+
+template <class T>
+T LinkedList<T>::GetHeadValue()
+{
+    return _head->_value;
+}
+
 template <class T>
 void LinkedList<T>::ResetHeadTail()
 {

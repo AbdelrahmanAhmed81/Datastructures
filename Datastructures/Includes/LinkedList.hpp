@@ -25,7 +25,8 @@ public:
     void Clear();
     void Print();
     bool IsEmpty();
-
+    T GetTailValue();
+    T GetHeadValue();
 private:
     int _count;
     void ResetHeadTail();
