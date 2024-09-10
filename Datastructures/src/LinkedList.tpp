@@ -3,6 +3,9 @@
 
 using namespace std;
 
+#ifndef LINKEDLIST_TPP
+#define LINKEDLIST_TPP
+
 template <class T>
 LinkedListNode<T>::LinkedListNode(T value)
 {
@@ -206,3 +209,5 @@ void LinkedList<T>::ResetHeadTail()
 {
     _head = _tail = nullptr;
 }
+
+#endif

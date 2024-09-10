@@ -2,6 +2,9 @@
 #include <stdexcept>
 #include <iostream>
 
+#ifndef ARRAYLIST_TPP
+#define ARRAYLIST_TPP
+
 template <class T>
 ArrayList<T>::ArrayList()
 {
@@ -182,3 +185,5 @@ void ArrayList<T>::Print()
 
     std::cout << std::endl;
 }
+
+#endif

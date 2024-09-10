@@ -1,6 +1,6 @@
 #include <iostream>
-// #include "src/ArrayList.tpp"
-// #include "src/LinkedList.tpp"
+#include "src/ArrayList.tpp"
+#include "src/LinkedList.tpp"
 #include "src/Stack.tpp"
 using namespace std;
 
@@ -53,6 +53,6 @@ int main()
 
     //-------------------------------------------------------
 
-    
+
     return 0;
 }

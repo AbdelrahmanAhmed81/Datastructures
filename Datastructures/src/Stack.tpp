@@ -1,5 +1,8 @@
 #include "../Includes/Stack.hpp"
 
+#ifndef STACK_TPP
+#define STACK_TPP
+
 template <class T>
 Stack<T>::Stack()
 {
@@ -42,3 +45,5 @@ T Stack<T>::Pop()
     _list->RemoveLast();
     return val;
 }
+
+#endif

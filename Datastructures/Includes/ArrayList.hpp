@@ -1,3 +1,6 @@
+#ifndef ARRAYLIST_HPP
+#define ARRAYLIST_HPP
+
 template <class T>
 class ArrayList
 {
@@ -27,3 +30,5 @@ private:
     void Resize(int capacity);
     void static Copy(T *src, int srcIndex, T *dest, int destIndex, int length);
 };
+
+#endif

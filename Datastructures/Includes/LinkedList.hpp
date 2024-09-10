@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_HPP
+#define LINKEDLIST_HPP
+
 template <class T>
 class LinkedListNode
 {
@@ -27,9 +30,12 @@ public:
     bool IsEmpty();
     T GetTailValue();
     T GetHeadValue();
+
 private:
     int _count;
     void ResetHeadTail();
     LinkedListNode<T> *_head = nullptr;
     LinkedListNode<T> *_tail = nullptr;
 };
+
+#endif

@@ -1,6 +1,8 @@
 # depslib dependency file v1.0
-1725726240 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
+1725936464 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
 	<iostream>
+	"src/ArrayList.tpp"
+	"src/LinkedList.tpp"
 	"src/Stack.tpp"
 
 1723608804 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\list.hpp
@@ -16,22 +18,22 @@
 	<stdexcept>
 	<iostream>
 
-1724901346 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\arraylist.tpp
+1725937672 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\arraylist.tpp
 	"../Includes/ArrayList.hpp"
 	<stdexcept>
 	<iostream>
 
-1724633422 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\arraylist.hpp
+1725937472 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\arraylist.hpp
 
-1725721916 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\linkedlist.tpp
+1725937704 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\linkedlist.tpp
 	<iostream>
 	"../Includes/LinkedList.hpp"
 
-1725721921 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\linkedlist.hpp
+1725937219 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\linkedlist.hpp
 
-1725726062 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\stack.tpp
+1725937768 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\stack.tpp
 	"../Includes/Stack.hpp"
 
-1725726197 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\stack.hpp
+1725937588 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\stack.hpp
 	"../src/LinkedList.tpp"
 
