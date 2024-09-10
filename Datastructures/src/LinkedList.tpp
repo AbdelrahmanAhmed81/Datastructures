@@ -32,6 +32,7 @@ int LinkedList<T>::Count()
     return _count;
 }
 
+//O(1) - O(n) for memory management
 template <class T>
 void LinkedList<T>::Clear()
 {
@@ -51,6 +52,7 @@ bool LinkedList<T>::IsEmpty()
     return _count == 0;
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::AddLast(T value)
 {
@@ -67,6 +69,7 @@ void LinkedList<T>::AddLast(T value)
     _count++;
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::AddFirst(T value)
 {
@@ -101,6 +104,7 @@ void LinkedList<T>::Print()
     }
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::RemoveFirst()
 {
@@ -118,6 +122,7 @@ void LinkedList<T>::RemoveFirst()
     _count--;
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::RemoveLast()
 {
@@ -135,6 +140,7 @@ void LinkedList<T>::RemoveLast()
     _count--;
 }
 
+//O(n)
 template <class T>
 LinkedListNode<T> *LinkedList<T>::Find(T value)
 {
@@ -150,6 +156,7 @@ LinkedListNode<T> *LinkedList<T>::Find(T value)
     return nullptr;
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::AddNext(LinkedListNode<T> *node, T value)
 {
@@ -171,6 +178,7 @@ void LinkedList<T>::AddNext(LinkedListNode<T> *node, T value)
     }
 }
 
+//O(1)
 template <class T>
 void LinkedList<T>::AddBefore(LinkedListNode<T> *node, T value)
 {
@@ -192,12 +200,14 @@ void LinkedList<T>::AddBefore(LinkedListNode<T> *node, T value)
     }
 }
 
+//O(1)
 template <class T>
 T LinkedList<T>::GetTailValue()
 {
     return _tail->_value;
 }
 
+//O(1)
 template <class T>
 T LinkedList<T>::GetHeadValue()
 {

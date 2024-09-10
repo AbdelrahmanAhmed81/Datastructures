@@ -26,18 +26,21 @@ int Queue<T>::Count()
     return _list->Count();
 }
 
+//O(1)
 template <class T>
 void Queue<T>::Enqueue(T value)
 {
     _list->AddLast(value);
 }
 
+//O(1)
 template <class T>
 T Queue<T>::Peek()
 {
     return _list->GetHeadValue();
 }
 
+//O(1)
 template <class T>
 T Queue<T>::Dequeue()
 {

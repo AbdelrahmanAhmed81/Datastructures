@@ -32,6 +32,7 @@ void ArrayList<T>::Resize(int capacity)
     _data = newData;
 }
 
+//O(1)
 template <class T>
 T ArrayList<T>::ElementAt(int index)
 {
@@ -59,6 +60,7 @@ bool ArrayList<T>::IsValidIndex(int index)
     return (index >= 0 && index < _count);
 }
 
+//O(1)
 template <class T>
 T &ArrayList<T>::operator[](int index)
 {
@@ -68,18 +70,21 @@ T &ArrayList<T>::operator[](int index)
         throw std::out_of_range("index out of list elements range");
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::Clear()
 {
     ArrayList::RemoveRange(0, _count);
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::Add(T element)
 {
     ArrayList::AddAt(_count, element);
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::AddAt(int index, T element)
 {
@@ -97,6 +102,7 @@ void ArrayList<T>::AddAt(int index, T element)
     _count++;
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::AddRange(int index, T *elements, int length)
 {
@@ -114,12 +120,14 @@ void ArrayList<T>::AddRange(int index, T *elements, int length)
     _count += length;
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::Remove()
 {
     ArrayList::RemoveAt(_count - 1);
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::RemoveAt(int index)
 {
@@ -135,6 +143,7 @@ void ArrayList<T>::RemoveAt(int index)
     }
 }
 
+//O(n)
 template <class T>
 void ArrayList<T>::RemoveRange(int index, int length)
 {

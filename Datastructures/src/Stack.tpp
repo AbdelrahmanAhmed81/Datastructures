@@ -26,18 +26,21 @@ int Stack<T>::Count()
     return _list->Count();
 }
 
+//O(1)
 template <class T>
 void Stack<T>::Push(T value)
 {
     _list->AddLast(value);
 }
 
+//O(1)
 template <class T>
 T Stack<T>::Peek()
 {
     return _list->GetTailValue();
 }
 
+//O(1)
 template <class T>
 T Stack<T>::Pop()
 {
