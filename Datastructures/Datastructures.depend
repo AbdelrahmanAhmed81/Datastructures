@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1725936464 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
+1725939440 source:f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\main.cpp
 	<iostream>
 	"src/ArrayList.tpp"
 	"src/LinkedList.tpp"
 	"src/Stack.tpp"
+	"src/Queue.tpp"
 
 1723608804 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\list.hpp
 
@@ -35,5 +36,11 @@
 	"../Includes/Stack.hpp"
 
 1725937588 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\stack.hpp
+	"../src/LinkedList.tpp"
+
+1725939587 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\src\queue.tpp
+	"../Includes/Queue.hpp"
+
+1725937564 f:\datastructures and algorithms\datastructures-and-algorithms\datastructures\datastructures\datastructures\includes\queue.hpp
 	"../src/LinkedList.tpp"
 

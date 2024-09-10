@@ -1,7 +1,9 @@
 #include <iostream>
-#include "src/ArrayList.tpp"
-#include "src/LinkedList.tpp"
-#include "src/Stack.tpp"
+// #include "src/ArrayList.tpp"
+// #include "src/LinkedList.tpp"
+// #include "src/Stack.tpp"
+#include "src/Queue.tpp"
+
 using namespace std;
 
 int main()
@@ -50,9 +52,22 @@ int main()
     // cout << stack->Pop() <<endl;
     // cout << stack->Pop() <<endl;
     // stack->Print();
+    // delete(stack);
 
     //-------------------------------------------------------
 
+    // queue test
+    Queue<int> *queue = new Queue<int>();
+    queue->Enqueue(5);
+    queue->Enqueue(4);
+    queue->Enqueue(2);
+    queue->Print();
+    cout << queue->Dequeue() << endl;
+    cout << queue->Count() << endl;
+    queue->Print();
+    delete (queue);
+
+    //-------------------------------------------------------
 
     return 0;
 }

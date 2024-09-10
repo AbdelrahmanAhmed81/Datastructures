@@ -23,7 +23,7 @@ void Stack<T>::Print()
 template <class T>
 int Stack<T>::Count()
 {
-    return _list->Count;
+    return _list->Count();
 }
 
 template <class T>
