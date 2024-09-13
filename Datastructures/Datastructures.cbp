@@ -35,10 +35,12 @@
 		</Compiler>
 		<Unit filename="Includes/ArrayList.hpp" />
 		<Unit filename="Includes/LinkedList.hpp" />
+		<Unit filename="Includes/Queue.hpp" />
 		<Unit filename="Includes/Stack.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArrayList.tpp" />
 		<Unit filename="src/LinkedList.tpp" />
+		<Unit filename="src/Queue.tpp" />
 		<Unit filename="src/Stack.tpp" />
 		<Extensions />
 	</Project>
